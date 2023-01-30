@@ -1,31 +1,56 @@
 import React from 'react'
 import './App.css'
 import Carousel3D from './components/Carousel3D'
+import Project from './components/Project/Project'
 
 function App() {
   const slides = [
     {
       key: 1,
-      content: <img src="https://picsum.photos/800/800/?random" alt="1" />,
+      content: (
+        <Project
+          image="https://picsum.photos/800/800/?random"
+          title="Project 1"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        />
+      ),
     },
     {
       key: 2,
-      content: <img src="https://picsum.photos/800/800/?random" alt="2" />,
+      content: (
+        <Project
+          image="https://picsum.photos/800/800/?random"
+          title="Project 2"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        />
+      ),
     },
     {
       key: 3,
-      content: <img src="https://picsum.photos/600/800/?random" alt="3" />,
+      content: (
+        <Project
+          image="https://picsum.photos/800/800/?random"
+          title="Project 3"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        />
+      ),
     },
     {
       key: 4,
-      content: <img src="https://picsum.photos/800/500/?random" alt="4" />,
+      content: (
+        <Project
+          image="https://picsum.photos/800/800/?random"
+          title="Project 4"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        />
+      ),
     },
   ]
   return (
     <div className="App">
       <header className="App-header">
         <h1>test</h1>
-        <Carousel3D card={slides} offset={200} showArrow={false} />
+        <Carousel3D card={slides} offset={100} showArrow={false} />
       </header>
     </div>
   )
