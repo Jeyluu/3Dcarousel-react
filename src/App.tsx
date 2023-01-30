@@ -45,11 +45,20 @@ function App() {
         />
       ),
     },
+    {
+      key: 5,
+      content: (
+        <Project
+          image="https://picsum.photos/800/800/?random"
+          title="Project 5"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+        />
+      ),
+    },
   ]
   return (
     <div className="App">
       <header className="App-header">
-        <h1>test</h1>
         <Carousel3D card={slides} offset={100} showArrow={false} />
       </header>
     </div>

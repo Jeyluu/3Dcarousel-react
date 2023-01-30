@@ -29,7 +29,13 @@ function Carousel3D(props: Carousel3DP) {
   }, [offset, showArrow, showArrows])
 
   return (
-    <div style={{ width: '100%', margin: '0 auto' }}>
+    <div
+      style={{
+        margin: '0 auto',
+        height: '50vh',
+        padding: '0px 190px',
+      }}
+    >
       <Carousel
         slides={cards}
         goToSlide={goToSlide}

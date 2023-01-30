@@ -1,5 +1,6 @@
 import { useSpring, animated } from 'react-spring'
 import React, { useState } from 'react'
+import './Project.css'
 
 interface ProjectP {
   image: string
@@ -12,7 +13,7 @@ function Project(props: ProjectP) {
 
   const [show, setShown] = useState(false)
 
-  const props3 = useSpring({
+  const effectStyle = useSpring({
     opacity: 1,
     transform: show ? 'scale(1.03)' : 'scale(1)',
     boxShadow: show
@@ -21,7 +22,8 @@ function Project(props: ProjectP) {
   })
   return (
     <animated.div
-      style={props3}
+      className="card"
+      style={effectStyle}
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     >
